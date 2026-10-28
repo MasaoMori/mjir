@@ -5,13 +5,15 @@ url: "https://mjir.info"
 baseurl: ""
 lang: ja
 timezone: Asia/Tokyo
-theme: minima
 permalink: /:year/:month/:day/:title/
 plugins:
+  - jekyll-paginate
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-redirect-from
+paginate: 10
+paginate_path: "/page/:num/"
 feed:
   path: feed.xml
 exclude:
@@ -23,5 +25,3 @@ include:
   - wp-content
 keep_files: []
 
-minima:
-  date_format: "%Y年%m月%d日"

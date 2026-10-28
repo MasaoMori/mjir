@@ -1,0 +1,5 @@
+<div class="entry-meta postmeta">
+  <span class="meta-date"><a href="{{ include.post.url | relative_url }}" rel="bookmark"><time class="entry-date published updated" datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%Y-%m" }}</time></a></span>
+  {%- if include.post.author %}<span class="meta-author author vcard"> {{ include.post.author }}</span>{% endif -%}
+  {%- if include.post.categories.size > 0 %}<span class="meta-category"> {{ include.post.categories | join: "、" }}</span>{% endif -%}
+</div>

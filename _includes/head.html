@@ -5,6 +5,14 @@
   {%- comment -%}試験公開(github.io)では検索エンジンに載せない。独自ドメインでは出力しない。{%- endcomment -%}
   {%- if site.url contains 'github.io' -%}<meta name="robots" content="noindex, nofollow">{%- endif -%}
   {%- seo -%}
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="icon" href="{{ '/wp-content/uploads/2022/08/cropped-logo-JAIR-1-e1565924229681-75x75.png' | relative_url }}" sizes="32x32">
+  <link rel="icon" href="{{ '/wp-content/uploads/2022/08/cropped-logo-JAIR-1-e1565924229681.png' | relative_url }}" sizes="192x192">
+  <link rel="stylesheet" href="{{ '/assets/smartline/css/custom-fonts.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/smartline/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/smartline/css/genericons/genericons.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
   {%- feed_meta -%}
+  <script>var smartline_menu_title = { text: "メニュー" };</script>
+  <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/smartline/js/navigation.js' | relative_url }}" defer></script>
 </head>

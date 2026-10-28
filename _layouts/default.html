@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'ja' }}">
+{%- include head.html -%}
+<body class="custom-background wp-custom-logo">
+<a class="skip-link screen-reader-text" href="#content">コンテンツへ移動</a>
+<div id="wrapper" class="hfeed">
+  <div id="header-wrap">
+    <header id="header" class="clearfix" role="banner">
+      <div id="logo" class="clearfix">
+        <a href="{{ '/' | relative_url }}" class="custom-logo-link" rel="home"><img width="60" height="59" src="{{ '/wp-content/uploads/2022/08/cropped-sjari.png' | relative_url }}" class="custom-logo" alt="{{ site.title | escape }}"></a>
+        <h1 class="site-title"><a href="{{ '/' | relative_url }}" rel="home">{{ site.title | escape }}</a></h1>
+        <p class="site-description">{{ site.description | escape }}</p>
+      </div>
+      <div id="header-content" class="clearfix"></div>
+    </header>
+  </div>
+  <div id="navi-wrap">
+    <nav id="mainnav" class="clearfix" role="navigation">
+      <ul id="mainnav-menu" class="main-navigation-menu">
+        {%- for item in site.data.navigation -%}
+        <li class="menu-item{% if item.children %} menu-item-has-children{% endif %}"><a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          {%- if item.children -%}
+          <ul class="sub-menu">
+            {%- for c in item.children -%}<li class="menu-item"><a href="{{ c.url | relative_url }}">{{ c.title }}</a></li>{%- endfor -%}
+          </ul>
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+  <div id="wrap" class="clearfix">
+    <section id="content" class="primary" role="main">
+{{ content }}
+    </section>
+    {% include sidebar.html %}
+  </div>
+  <footer id="footer" class="clearfix" role="contentinfo">
+    <div id="footer-text"><span class="credit-link">Theme based on Smartline Lite by ThemeZee (GPL v2)</span></div>
+  </footer>
+</div>
+</body>
+</html>

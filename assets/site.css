@@ -1,0 +1,3 @@
+/* Smartline Lite(GPL v2)の背景画像と、静的サイト用の補足 */
+body { background-image: url("smartline/images/background.png"); background-repeat: repeat; background-position: left top; }
+.notice { padding: 0.6em 1em; background: #f3f3f3; border-left: 4px solid #cc2e2e; }
