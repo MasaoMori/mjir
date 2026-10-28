@@ -1,0 +1,27 @@
+title: "大学情報・機関調査研究会 MJIR"
+description: "Meeting on Japanese Institutional Research"
+# 試験公開は https://masaomori.github.io + baseurl: /mjir 、本番は https://mjir.info + baseurl: ""
+url: "https://mjir.info"
+baseurl: ""
+lang: ja
+timezone: Asia/Tokyo
+theme: minima
+permalink: /:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+feed:
+  path: feed.xml
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+include:
+  - wp-content
+keep_files: []
+
+minima:
+  date_format: "%Y年%m月%d日"

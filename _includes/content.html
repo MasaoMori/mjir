@@ -1,0 +1,3 @@
+{%- assign _h = 'href="' | append: site.baseurl | append: '/' -%}
+{%- assign _s = 'src="' | append: site.baseurl | append: '/' -%}
+{{ content | replace: 'href="/', _h | replace: 'src="/', _s }}
